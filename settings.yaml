@@ -1,0 +1,4 @@
+vm_name: dev-box-archlinux  # name of the vm
+vm_ip: 192.168.50.10        # ip of the vm
+vm_mem: 4096                # max ram of the vm
+vm_cpus: 4                  # nb cpus of the vm
