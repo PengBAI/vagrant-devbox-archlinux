@@ -57,6 +57,8 @@ Vagrant.configure("2") do |config|
     vb.memory = CONF['vm_mem']
     # Customize the nb of cpu
     vb.cpus = CONF['vm_cpus']
+    # share clipboard between vm and host
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
   #
   # View the documentation for the provider you are using for more
@@ -83,6 +85,7 @@ Vagrant.configure("2") do |config|
     sudo pacman -Su --noconfirm
     yes | sudo pacman -Syu
     sudo pacman -S  --noconfirm \
+        virtualbox-guest-utils \
         bash-completion \
         firefox \
         eclipse-jee \
