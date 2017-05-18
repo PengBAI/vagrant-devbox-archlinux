@@ -110,5 +110,9 @@ Vagrant.configure("2") do |config|
         lightdm-gtk-greeter
     sudo systemctl enable lightdm.service
 
+    #set keyboard fr
+    sudo localectl set-keymap fr
+    sudo localectl set-x11-keymap fr
+
   SHELL
 end
