@@ -89,7 +89,7 @@ Vagrant.configure("2") do |config|
         bash-completion \
         firefox \
         eclipse-jee \
-        jre8-openjdk \
+        jre8-openjdk openjdk8-src\
         maven \
         git \
         kdiff3 \
@@ -104,7 +104,8 @@ Vagrant.configure("2") do |config|
     # add group docker to vagrant
     sudo usermod -a -G docker vagrant
 
-    sudo pacman -S --noconfirm \
+	# xfce4 desktop
+    sudo pacman -S --noconfirm -y \
         xfce4 xfce4-goodies \
         xorg-server xorg-server-utils xorg-xinit \
         lightdm-gtk-greeter
